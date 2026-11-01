@@ -1,0 +1,60 @@
+{
+  "storeInfo": {
+    "title": "maiko games",
+    "author": "744ykvztpj-sketch",
+    "description": "homebrew games made for the nintendo 3ds",
+    "url": "https://raw.githubusercontent.com/744ykvztpj-sketch/maiko-games/main/maiko-games.unistore",
+    "file": "maiko-games.unistore",
+    "bg_index": 0,
+    "bg_sheet": 0,
+    "revision": 1,
+    "version": 4
+  },
+  "storeContent": [
+    {
+      "info": {
+        "title": "snake",
+        "author": "maiko games",
+        "description": "a snake game for love potion with touchscreen settings on the bottom screen.",
+        "category": [
+          "game"
+        ],
+        "console": [
+          "3DS"
+        ],
+        "icon_index": -1,
+        "sheet_index": 0,
+        "last_updated": "2026-11-01",
+        "license": "unknown",
+        "version": "1.4"
+      },
+      "snake (LÖVE Potion)": [
+        {
+          "type": "mkdir",
+          "directory": "sdmc:/3ds/game"
+        },
+        {
+          "type": "downloadFile",
+          "file": "https://raw.githubusercontent.com/744ykvztpj-sketch/maiko-games/main/snake_game_lovepotion_v1_4.zip",
+          "output": "sdmc:/snake_game_lovepotion_v1_4.zip",
+          "message": "downloading snake..."
+        },
+        {
+          "type": "extractFile",
+          "file": "sdmc:/snake_game_lovepotion_v1_4.zip",
+          "input": "main.lua",
+          "output": "sdmc:/3ds/game/main.lua",
+          "message": "installing snake..."
+        },
+        {
+          "type": "deleteFile",
+          "file": "sdmc:/snake_game_lovepotion_v1_4.zip"
+        },
+        {
+          "type": "promptMessage",
+          "message": "snake was installed to sdmc:/3ds/game/main.lua. launch LÖVE Potion to play."
+        }
+      ]
+    }
+  ]
+}
